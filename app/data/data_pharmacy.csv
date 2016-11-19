@@ -1,0 +1,13 @@
+Date,Country,Pharmacy,Private Key Pharmacy,Public Key,Product,NDC,Lot #,Package Size,Serial Number Unit,Serial Number Case,Serial Number Carton,Serial Number Pallet,GL-Address,GL-City,GL-State,GL-Zip
+"June 21, 2016",US,CVS,,Jans3601,Prezcobix,59676-575-30,ABP6358,30,1,1A,1AV3,1AV4D,1525 North Central Avenue ,Phoenix,AZ,85004
+"July 4, 2016",US,Walgreens,,Jans3602,Yondelis,59676-610-01,KIY9221,1,2,2B,2BX4,2BX5E,151 N. State St,Chicago,IL,60601
+"August 3, 2016",US,Mlvia,,Jans3603,Darzalex 100mg/5,57894-502-05,OND3794,1,3,3C,3CY5,3CY6F,2500 Milvia St,Berkeley,CA,94704
+"September 3, 2016",US,Mlvia,,Jans3603,Darzalex 400mg/20ml,57894-502-20,XQR4973,1,3,3C,3CY5,3CY6F,2500 Milvia St,Berkeley,CA,94704
+"April 4, 2016",US,Rite Aid,,Jans3604,Simponi 50mg/0.5ml SmartJect,57894-070-02,SSI1432,1,4,4D,4DZ6,4DZ7G,4242 2nd St N,Folkston,GA ,31537
+"March 23, 2016",Slovenia,Lekarana Dobrepolje,,Jans3605,Sylvant 100mg,57894-420-01,QSY7350,1,5,5E,5EQ7,5EQ8H,Videm 37a,Videm-Dobrepolje,,1312
+"March 23, 2016",Slovenia,Lekarana Dobrepolje,,Jans3605,Sylvant 400mg,57894-421-01,OSU7531,1,5,5E,5EQ7,5EQ8H,Videm 37a,Videm-Dobrepolje,,1312
+"December 6, 2016",China,Dongfang Pharmacy,,Jans3606,Invega 6mg,50458-551-01,DIN6729,30,6,6F,6FR8,6FR9I,Pudong South Road,Shanghai,,1036
+"February 14, 2016",Austraila,Newton's Pharmacy,,Jans3607,Invokana 100mg,50458-140-50,UEI2319,500,7,7G,7GS9,7GS10J,32/119 York Street,Sydney,,2000
+"May 31, 2016",Argentina,Farmacia de la Estrella,,Jans3608,Xarelto 20mg,50458-579-90,QRX5483,90,8,8H,8HT2,8HT3K,Defensa 201,Buenos Aires,,C1065AAD CABA
+"January 9, 2016",Bermuda,Woodbourne Chemist,,Jans3609,Olysio 150mg,59676-225-28,WPO6421,28,9,9I,9IU1,9IU2L,1 Gorham Road,,,HM08
+"November 10, 2016",Russia,Alfega Apteka,,Jans3610,Sirturo 100mg,59676-701-01,ZXS4790,188,10,10J,10JW0,10JW1M,Nikoloyamskiy pereulok 2,Moscow,,105062

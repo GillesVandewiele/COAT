@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pharma">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>COAT - COntext Adaptive Trainer</title>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+	
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js"/>
+
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/papaparse.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body ng-controller="pharmaController">
+  
+ 
+	<div class="panel panel-primary">
+	  <div class="panel-heading">
+		<h3 class="panel-title">Training initialisation</h3>
+	  </div>
+
+	  	<div class='lineChart'>
+		<svg id="priorLine" width="1000" height="500"></svg>
+		</div>
+
+		<table class="table table-striped">
+			<caption>Repeat the following blocks {{activeSession['repetitions']}} times</caption>
+		    <thead>
+		      <tr>
+		        <th>Blocktime</th>
+		        <th>BlockBPM</th>
+		        <th>BlockZone</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr ng-repeat="x in activeSession['blocks']">
+		      	<td>{{x['blockTime']}}</td>
+		      	<td>{{x['blockBPM']}}</td>
+		      	<td>{{x['blockZone']}}</td>
+		      </tr>
+		    </tbody>
+		</table>
+
+		<div class="list-group" id='sessionList'>
+			<button type="button" class="list-group-item" ng-repeat="(key, value) in sessions" ng-click="loadSession(key)"> {{key}} - {{value['name']}} </button>
+		</div>
+
+		<input type='file' id="trainingUpload">
+	  
+	</div>
+
+	<div class="panel panel-primary" id='questionairePanel' style='display:none;'>
+	  <div class="panel-heading">
+		<h3 class="panel-title">Questionaire</h3>
+	  </div>
+	  	<div class='questionaire text-center'>
+		  	<p>How well did you <strong>sleep</strong> last night?</p>
+
+			<div class="btn-group">
+			<form action="#" method="post">
+				<input type="radio" class="radio" name="example" id="ex1" value="ex1"/>
+			    <label for="ex1" class="label" style="background-image: url(../good_smiley.png); background-size: cover;" >Good</label>
+			    <input type="radio" class="radio" name="example" id="ex2" value="ex2" />
+			    <label for="ex2" class="label" style="background-image: url(../medium_smiley.png); background-size: cover;" >Medium</label>
+			    <input type="radio" class="radio" name="example" id="ex3" value="ex3" />
+			    <label for="ex3" class="label" style="background-image: url(../bad_smiley.png); background-size: cover;" >Bad</label>
+			</form>
+			</div>
+		  	<p>How are you feeling <strong>mentally</strong>?</p>
+			<div class="btn-group">
+			<form action="#" method="post">
+				<input type="radio" class="radio" name="example" id="ex4" value="ex4"/>
+			    <label for="ex4" class="label" style="background-image: url(../good_smiley.png); background-size: cover;" >Good</label>
+			    <input type="radio" class="radio" name="example" id="ex5" value="ex5" />
+			    <label for="ex5" class="label" style="background-image: url(../medium_smiley.png); background-size: cover;" >Medium</label>
+			    <input type="radio" class="radio" name="example" id="ex6" value="ex6" />
+			    <label for="ex6" class="label" style="background-image: url(../bad_smiley.png); background-size: cover;" >Bad</label>
+			</form>
+			</div>
+		  	<p>How are you feeling <strong>physically?</strong></p>
+			<div class="btn-group">
+			<form action="#" method="post">
+				<input type="radio" class="radio" name="example" id="ex7" value="ex7"/>
+			    <label for="ex7" class="label" style="background-image: url(../good_smiley.png); background-size: cover;" >Good</label>
+			    <input type="radio" class="radio" name="example" id="ex8" value="ex8" />
+			    <label for="ex8" class="label" style="background-image: url(../medium_smiley.png); background-size: cover;" >Medium</label>
+			    <input type="radio" class="radio" name="example" id="ex9" value="ex9" />
+			    <label for="ex9" class="label" style="background-image: url(../bad_smiley.png); background-size: cover;" >Bad</label>
+			</form>
+			</div> <br>
+
+			<p>Air quality:</p>
+			<input type='text' id='airQuality'  class="form-control"/>
+			<p>Environment temperature:</p>
+			<input type='text' id='temperature' class="form-control"/>
+			<p>Sleep:</p>
+			<input type='text' id='sleep' class="form-control"/>
+			<p>Body temperature:</p>
+			<input type='text' id='bodyTemperature' class="form-control"/>
+
+			<button type="button" class="btn btn-default" id='questionaireBtn'>OK</button>
+
+		</div>
+	  
+	</div>
+
+	<div class="panel panel-primary" id='posteriorPanel' style='display:none;'>
+	  <div class="panel-heading">
+		<h3 class="panel-title">Adapted training</h3>
+	  </div>
+		
+
+	  <svg id="posteriorLine" width="1000" height="500"></svg>
+
+
+	  <!--<input type='file' id="routeUpload">-->
+	  
+	</div>
+
+	<div id="mapid"></div>
+
+	<script src="../js/leaflet-gpx/gpx.js"></script>
+	<script src="../js/pharma.js"></script>
+
+  </body>
+</html>
