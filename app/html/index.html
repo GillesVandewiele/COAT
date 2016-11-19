@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pharma">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Supply Chain Wire Frame</title>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+	
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js"/>
+	
+	<script src="../js/bootstrap.min.js"></script>
+	
+	<script>
+		$( document ).ready(function(){
+			$(".toggle1").click(function(){
+				$(".toggle-body1").toggle("slow");
+			});
+			
+			$(".toggle2").click(function(){
+				$(".toggle-body2").toggle("slow");
+			});
+		});
+	</script>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body ng-controller="pharmaController">
+  
+ 
+	<div class="panel panel-primary">
+	  <div class="panel-heading">
+		<h3 class="panel-title">Category</h3>
+	  </div>
+	  <div class="panel-body">
+		<div class="col-md-2 tile large">
+			<button type="button" class="btn btn-primary searchBtn"><strong>Manufacturing</strong></button>
+		</div>
+		<div class="col-md-2 tile large">
+			<button type="button" class="btn btn-primary searchBtn"><strong>Logistics</strong></button>
+		</div>
+		<div class="col-md-2 tile large">
+			<button type="button" ng-click="insuranceToggle()" class="btn btn-primary searchBtn"><strong>Insurance</strong></button>
+		</div>
+		<div class="col-md-2 tile large">
+			<button type="button" class="btn btn-primary searchBtn"><strong>Wholesale</strong></button>
+		</div>
+		<div class="col-md-2 tile large">
+			<button type="button" class="btn btn-primary searchBtn"><strong>Pharmacy</strong></button>
+		</div>
+		<div class="col-md-2 tile large">
+			<button type="button" class="btn btn-primary searchBtn"><strong>Patient</strong></button>
+		</div>
+	  </div>
+	</div>
+	
+	
+	<div class="panel panel-primary panelGeography" style='display: none;'>
+	  <div class="panel-heading toggle1">
+		<h3 class="panel-title">Geography</h3>
+	  </div>
+	  <div class="panel-body toggle-body1">
+	  <div class='row'>
+		<div class="col-md-4 tile medium">
+			<div class="form-group">
+			  <label for="sel1">Country:</label>
+			  <select ng-model='country' ng-options='coun for coun in countries' class="form-control" id="sel1">
+			  </select>
+			</div>
+		</div>
+		<div class="col-md-4 tile medium">
+			<div class="form-group">
+			  <label for="txt1">City:</label>
+			  <input type='text' ng-model='city' class="form-control" id="txt1"/>
+			</div>
+		</div>
+		<div class="col-md-4 tile medium">
+			<div class="form-group">
+			  <label for="txt2">Address:</label>
+			  <input type='text' ng-model='address' class="form-control" id="txt2"/>
+			</div>
+		</div>
+	  </div>
+	  <div class='row'>
+		<button type="button" class="btn btn-primary" ng-click='filterData()'><strong>Filter</strong></button>
+	  </div>
+	  </div>
+	</div>
+	
+	<div class="panel panel-primary panelFilters" style='display: none;'>
+	  <div class="panel-heading toggle2">
+		<h3 class="panel-title">More filters</h3>
+	  </div>
+	  <div class="panel-body toggle-body2">
+		<div class='row'>
+		<div class="col-md-4 tile medium">
+			<div class="form-group">
+			  <label for="sel2">Product:</label>
+			  <select class="form-control"  ng-model='product' ng-options='prod for prod in products' id="sel2">
+			  </select>
+			</div>
+		</div>
+		<div class="col-md-4 tile medium">
+			<div class="form-group">
+			  <label for="txt3">Lot:</label>
+			  <input type='text' ng-model='lot' class="form-control" id="txt3"/>
+			</div>
+		</div>
+		<div class="col-md-4 tile medium">
+			<div class="form-group">
+			  <label for="date1">From date:</label>
+			  <input type='date' ng-model='dateFrom' class="form-control" id="date1"/>
+			  <label for="date2">To date:</label>
+			  <input type='date' ng-model='dateTo' class="form-control" id="date2"/>
+			</div>
+		</div>
+	  </div>
+	  <div class='row'>
+		<button type="button" class="btn btn-primary" ng-click='filterData()'><strong>Filter</strong></button>
+	  </div>
+	  </div>
+	</div>
+	
+	<table ng-show='insuranceTable' class="table table-hover">
+		<thead>
+		  <tr>
+			<th ng-repeat='x in columns_insurance'>{{x}}</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr ng-repeat='x in data_insurance_live'> 
+			<td ng-repeat='col in columns_insurance'> {{x[col]}} </td>
+		  </tr>
+		</tbody>
+	</table>
+
+	<div id="mapid"></div>
+
+
+	<script src="../js/pharma.js"></script>
+  </body>
+</html>

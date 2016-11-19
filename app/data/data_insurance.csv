@@ -1,0 +1,13 @@
+Date,Country,Patient,Age,Gender,Ethnicity,Insurance,Private Key Insurance,Prescriber,Prescriber Lic #,Rx #,Refills,Qty,Public Key,Product,NDC,Lot #,Package Size,Serial Number Unit,Serial Number Case,Serial Number Carton,Serial Number Pallet,GL-Address,GL-City,GL-State,GL-Zip
+"June 28, 2016",US,Joe Smith,20,M,C,BlueCross,BX3635,Jack Jones,CA167JJ,1097432,5,30,Jans3601,Prezcobix,59676-575-30,ABP6358,30,1,1A,1AV3,1AV4D,5750 W Thomas Rd,Phoenix,AZ,85031
+"August 21, 2016",US,Janet Walker,36,F,PI,United Health Care,UH2931,Sam Shepard,MD1379SS,273645,0,1,Jans3602,Yondelis,59676-610-01,KIY9221,1,2,2B,2BX4,2BX5E,111 Madison St,Oak Park, IL ,60302
+"September 14, 2016",US,Steve Jones,45,M,A,Kaiser Permanente,KP4794,Susan Han,KL943621SH,6987311,0,1,Jans3603,Darzalex 100mg/5,57894-502-05,OND3794,1,3,3C,3CY5,3CY6F,1998 Shattuck Ave,Berkeley,CA,94704
+"September 12, 2016",US,Bob Fitch,54,M,H,Aetna Group,AG6891,Kristin Clancy,IL9031KC,6990311,0,1,Jans3603,Darzalex 400mg/20ml,57894-502-20,XQR4973,1,3,3C,3CY5,3CY6F,2239 Shoreline Dr,Alameda,CA,94501
+"June 14, 2016",US,Elizabeth McCalister,60,F,B,Humana,HG1472,Adam Jackson,NS667543AJ,779900,0,1,Jans3604,Simponi 50mg/0.5ml SmartJect,57894-070-02,SSI1432,1,4,4D,4DZ6,4DZ7G,3973 2nd Street,Folkston,GA ,31537
+"March 25, 2016",Slovenia,Janez Novak,35,M,C,ZZZS,ZZ6435,Breda Krajnc,29MSI3789BK,27678CW,0,1,Jans3605,Sylvant 100mg,57894-420-01,QSY7350,1,5,5E,5EQ7,5EQ8H,Videm 23,Videm-Dobrepolje,,1312
+"April 30, 2016",Slovenia,Gregor Podgornik,27,M,C,ZZZS,ZZ6435,Slavko Barut,30XDR4890SB,16543AX,0,1,Jans3605,Sylvant 400mg,57894-421-01,OSU7531,1,5,5E,5EQ7,5EQ8H,"Turjak 17,  , Slovenia",Turjak,,1311
+"January 7, 2017",China,Wang Xiu Ying,18,F,A,People's Insurance Company of China,PI1087,Li Ming,4056LM,777777,6,30,Jans3606,Invega 6mg,50458-551-01,DIN6729,30,6,6F,6FR8,6FR9I,"588 Nanjing Rd Pedestrian St, Huangpu",Shanghai, ,200001
+"May 29, 2016",Austraila,Grace Wallace,60,F,A,Australian Unity Health Limited,AU9451,Jae So Kim,3679850JK,41509,2,100,Jans3607,Invokana 100mg,50458-140-50,UEI2319,500,7,7G,7GS9,7GS10J,12/31 Market St,Sydney ,NSW ,02000
+"June 5, 2016",Argentina,Pablo Morales,70,M,H,Obras Sociales,OS0601,Carmen Castillo,83019999CC,00936,3,90,Jans3608,Xarelto 20mg,50458-579-90,QRX5483,90,8,8H,8HT2,8HT3K,Avenida Corrientes 1650,Buenos Aire,,C1042AAP CABA
+"January 10, 2016",Bermuda,Mare Trimingham,24,F,PI,Colonial Group International,CG7415,Wendy Arnold,3433WA,3993465,12,28,Jans3609,Olysio 150mg,59676-225-28,WPO6421,28,9,9I,9IU1,9IU2L,60 Tuckers Point Drive, ,,HS 02
+"February 10, 2017",Russia,Alexey Ivanov,80,M,C,Ingosstrakh,IN8642,Anastasiya Kuznetsov ,RU343679AK,1645,1,188,Jans3610,Sirturo 100mg,59676-701-01,ZXS4790,188,10,10J,10JW0,10JW1M,"Gazetny Lane, 17/9, Bldg. 1",Moscow ,,125009

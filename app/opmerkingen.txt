@@ -1,0 +1,14 @@
+Opmerkingen
+-------------
+
+Front-end: 				Bootstrap (CSS/HTML)
+Visualisatie:		   	D3.js (JavaScript)
+Back-end:				AngularJS (JavaScript)
+
+
+
+- Huidige opslag van locatie laat geen gebruiksvriendelijkheid toe.
+--> Sla geocoordinaten op in de plaats, dan kan je Google Maps-achtige search doen
+
+- Totaal niet scalable! Ik overloop elke keer alle data en pas de filters toe die ingevuld zijn
+--> Als je scalable wil gaan moet je DB gebruiken en DB query'en

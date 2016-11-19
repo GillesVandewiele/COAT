@@ -1,0 +1,16 @@
+Date,Country,Logistics Company,Private Key Logistics,Public Key,Product,NDC,Lot #,Package Size,Serial Number Unit,Serial Number Case,Serial Number Carton,Serial Number Pallet,GL-Address,GL-City,GL-State,GL-Zip
+"March 21, 2016",Puerto Rico,Janssen CLE,JCLE6902,Jans3601,Prezcobix,59676-575-30,ABP6358,30,1,1A,1AV3,1AV4D,State Road 933,Gurabo,PR ,00778
+"April 24, 2016",Canada,DHL,DHL9900,Jans3602,Yondelis,59676-610-01,KIY9221,1,2,2B,2BX4,2BX5E,4-355 Admiral Boulevard ,Mississauga ,ON ,L5T 2N1
+"May 23, 2016",US,UPS,UPS6677,Jans3603,Darzalex 100mg/5,57894-502-05,OND3794,1,3,3C,3CY5,3CY6F,3140 E Jurupa St,Ontario,CA,91761
+"June 29, 2016",US,UPS,UPS6677,Jans3603,Darzalex 400mg/20ml,57894-502-20,XQR4973,1,3,3C,3CY5,3CY6F,Highway 5,Bakersfield,CA,93311
+"February 1, 2016",US,UPS,UPS6677,Jans3604,Simponi 50mg/0.5ml SmartJect,57894-070-02,SSI1432,1,4,4D,4DZ6,4DZ7G,1081 Aviation Blvd,Hebron,KY,41048
+"December 31, 2016",Germany,C.H. Robinson Worldwide,CHR5231,Jans3605,Sylvant 100mg,57894-420-01,QSY7350,1,5,5E,5EQ7,5EQ8H,Langer Kornweg 19 - 23,Kelsterbach ,,65451
+"November 27, 2015",Germay,C.H. Robinson Worldwide,CHR5231,Jans3605,Sylvant 400mg,57894-421-01,OSU7531,1,5,5E,5EQ7,5EQ8H,Langer Kornweg 19 - 23,Kelsterbach ,,65451
+"October 1, 2016",Korea,FedEx,FEX1346,Jans3606,Invega 6mg,50458-551-01,DIN6729,30,6,6F,6FR8,6FR9I,"55, Tojeong-ro, Mapo-gu",Seoul, ,04083
+"November 25, 2015",Hong Kong,Exel PLC,EX9875,Jans3607,Invokana 100mg,50458-140-50,UEI2319,500,7,7G,7GS9,7GS10J,"Units 2008-2009, 20/F, Chevalier Commercial Centre, 8 Wang Hoi Road, Kowloon Bay",Kowloon, ,08523
+"March 3, 2016",Colombia ,C.H. Robinson Worldwide,CHR9834,Jans3608,Xarelto 20mg,50458-579-90,QRX5483,90,8,8H,8HT2,8HT3K,"Cr. 56 A # 148-86, Of. 508",Bogota,,111156
+"September 19, 2015",US,Kuehne & Nagel,KAN6374,Jans3609,Olysio 150mg,59676-225-28,WPO6421,28,9,9I,9IU1,9IU2L,15615 146th Ave,Jamaica,NY ,11434
+"August 15, 2016",Turkey,C.H. Robinson Worldwide,CHR2636,Jans3610,Sirturo 100mg,59676-701-01,ZXS4790,188,10,10J,10JW0,10JW1M,Icerenkoy Mah.Kayisdagi Cad. No.64 IMPA Plaza Kat.5,Istanbul ,,34752
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,, ,,,
