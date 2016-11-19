@@ -2,10 +2,10 @@ import thread
 from flask import Flask, request, abort, jsonify
 from flask.ext.restful import Resource, Api
 
-MAX_SIZE_HEARTBEATS = 5
+MAX_SIZE_HEARTBEATS = 50
 heartbeats = []
 
-MAX_SIZE_ACCELERATIONS = 5
+MAX_SIZE_ACCELERATIONS = 50
 accelerations = []
 
 SERVER_IP = '10.1.71.93'
