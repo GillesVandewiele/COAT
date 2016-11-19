@@ -16,6 +16,13 @@ app = Flask(__name__)
 # Default Flask Restful stuff.
 api = Api(app)
 
+def isInt(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
 # Start the restful server.
 def start_restfulserver():
     if True:
@@ -27,7 +34,7 @@ def start_restfulserver():
 
 def push_heartbeat(heartbeat):
     global heartbeats
-    if type(heartbeat) is int:
+    if isInt(heartbeat):
         while len(heartbeats) >= MAX_SIZE_HEARTBEATS:
             heartbeats.pop(0)
             print 'Removing heartbeat: %'
@@ -37,7 +44,7 @@ def push_heartbeat(heartbeat):
 
 def push_acceleration(acceleration):
     global accelerations
-    if type(acceleration) is int:
+    if isInt(acceleration):
         while len(accelerations) >= MAX_SIZE_ACCELERATIONS:
             accelerations.pop(0)
             print 'Removing acceleration: %'
@@ -49,17 +56,17 @@ def push_acceleration(acceleration):
 def post_heartbeat():
     global heartbeats
     print 'DATA: %s' % request.data
-    push_heartbeat(int(request.data))
+    push_heartbeat(request.data)
     print heartbeats
-    return jsonify({'status': 'OK'}), 200
+    return 'OK', 200
 
 @app.route('/coat/acceleration', methods=['POST'])
 def post_acceleration():
     global accelerations
     print 'DATA: %s' % request.data
-    push_acceleration(int(request.data))
+    push_acceleration(request.data)
     print accelerations
-    return jsonify({'status': 'OK'}), 200
+    return 'OK', 200
 
 @app.route('/coat/get_heartbeats', methods=['GET'])
 def get_heartbeats():
